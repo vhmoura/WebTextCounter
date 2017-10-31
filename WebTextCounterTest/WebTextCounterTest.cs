@@ -13,14 +13,14 @@ namespace WebTextCounterTest
         public void IsEmptyWebAddressValid()
         {
             var webCounter = new WebTextCounterService("");
-            var count = webCounter.Count();
+            var count = webCounter.GetData();
         }
 
         [TestMethod, ExpectedException(typeof(Exception), "Invalid web address")]
         public void IsDodgyWebAddressValid()
         {
             var webCounter = new WebTextCounterService("http://bla.123.rx");
-            var count = webCounter.Count();
+            var count = webCounter.GetData();
         }
 
         [TestMethod]
@@ -28,7 +28,7 @@ namespace WebTextCounterTest
         {
             var loyalAddress = @"http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt";
             var webCounter = new WebTextCounterService(loyalAddress);
-            var result = webCounter.Count();
+            var result = webCounter.GetData();
             Assert.IsNotNull(result);
             Assert.IsTrue(result.Count > 0);
         }

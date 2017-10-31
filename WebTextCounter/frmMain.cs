@@ -21,7 +21,7 @@ namespace TextCounter
         private void btnFetch_Click(object sender, EventArgs e)
         {
             var textCounter = new WebTextCounterService(edtWebAddress.Text);
-            var data = textCounter.Count();
+            var data = textCounter.GetData();
             grdTextCounter.DataSource = data;
         }
     }
