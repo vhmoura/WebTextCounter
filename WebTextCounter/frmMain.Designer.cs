@@ -1,4 +1,4 @@
-﻿namespace WebTextCounter
+﻿namespace TextCounter
 {
     partial class frmMain
     {

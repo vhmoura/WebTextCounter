@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WebTextCounter.Properties
+namespace TextCounter.Properties
 {
 
 
