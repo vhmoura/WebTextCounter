@@ -43,6 +43,7 @@
             this.btnFetch.TabIndex = 0;
             this.btnFetch.Text = "Fetch";
             this.btnFetch.UseVisualStyleBackColor = true;
+            this.btnFetch.Click += new System.EventHandler(this.btnFetch_Click);
             // 
             // edtWebAddress
             // 
@@ -50,6 +51,7 @@
             this.edtWebAddress.Name = "edtWebAddress";
             this.edtWebAddress.Size = new System.Drawing.Size(426, 20);
             this.edtWebAddress.TabIndex = 1;
+            this.edtWebAddress.Text = "http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt";
             // 
             // label1
             // 
@@ -62,22 +64,35 @@
             // 
             // grdTextCounter
             // 
+            this.grdTextCounter.AllowUserToAddRows = false;
+            this.grdTextCounter.AllowUserToDeleteRows = false;
+            this.grdTextCounter.AllowUserToOrderColumns = true;
+            this.grdTextCounter.AllowUserToResizeColumns = false;
+            this.grdTextCounter.AllowUserToResizeRows = false;
             this.grdTextCounter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdTextCounter.Location = new System.Drawing.Point(34, 72);
+            this.grdTextCounter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grdTextCounter.Location = new System.Drawing.Point(0, 84);
             this.grdTextCounter.Name = "grdTextCounter";
-            this.grdTextCounter.Size = new System.Drawing.Size(426, 283);
+            this.grdTextCounter.ReadOnly = true;
+            this.grdTextCounter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.grdTextCounter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdTextCounter.ShowEditingIcon = false;
+            this.grdTextCounter.Size = new System.Drawing.Size(552, 283);
             this.grdTextCounter.TabIndex = 3;
             // 
             // frmMain
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(552, 367);
             this.Controls.Add(this.grdTextCounter);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.edtWebAddress);
             this.Controls.Add(this.btnFetch);
             this.Name = "frmMain";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Web Text Counter";
             ((System.ComponentModel.ISupportInitialize)(this.grdTextCounter)).EndInit();

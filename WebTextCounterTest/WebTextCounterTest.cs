@@ -23,5 +23,15 @@ namespace WebTextCounterTest
             var count = webCounter.Count();
         }
 
+        [TestMethod]
+        public void CanLoadLoyalBooks()
+        {
+            var loyalAddress = @"http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt";
+            var webCounter = new WebTextCounterService(loyalAddress);
+            var result = webCounter.Count();
+            Assert.IsNotNull(result);
+            Assert.IsTrue(result.Count > 0);
+        }
+
     }
 }
