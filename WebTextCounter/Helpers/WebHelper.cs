@@ -24,7 +24,7 @@ namespace WebTextCounter.Helpers
                 {
                     return textReader.ReadToEnd();
                 }
-            } catch
+            } catch 
             {
                 throw new UnableToConnectWebAddressException();
             }

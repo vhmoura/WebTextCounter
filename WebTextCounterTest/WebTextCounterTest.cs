@@ -1,7 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using TextCounter;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebTextCounter.Service;
 using WebTextCounter.Common;
 

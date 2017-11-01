@@ -14,20 +14,19 @@ namespace WebTextCounter.Service
     {
         public List<TextData> GetData(string address)
         {
-            var result = _GetTextDataFromWebResult(WebHelper.GetWebData(address));
-            return result;
+            return _GetTextDataFromWebResult(WebHelper.GetWebData(address));
         }
 
         private List<TextData> _GetTextDataFromWebResult(string webData)
         {
-            var reg = new Regex("[^a-zA-Z']");
-            //var reg = new Regex(@"[^\w\s]");
-
-            return webData.Split(new char[] { '\r', '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries) // remove new line
+            //remove anything that's not a word
+            var reg = new Regex(@"[^\w]");
+            return webData.Split(new char[] { '\r', '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries) // break it in parts
                           .Select(s => reg.Replace(s, string.Empty).Trim().ToLower()) // take only chars
+                          .Where(st=> st.Length > 0) // exclude empty strings
                           .GroupBy(a => a) // group, count and check for prime
                           .Select(m => new TextData { Name = m.Key, Count = m.Count(), IsPrime = MathHelper.IsPrime(m.Count()) })
-                          .OrderBy(g=>g.Name)
+                          .OrderBy(g=>g.Name) // not necessary, but it is easier to follow in the screen
                           .ToList();
         }
     }
