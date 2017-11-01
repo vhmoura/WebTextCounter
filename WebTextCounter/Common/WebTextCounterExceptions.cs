@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace WebTextCounter.Common
 {
-    public class UnableToConnectWebAddressException: Exception
-    {
-    }
+    public class UnableToConnectWebAddressException: Exception { }
+    public class InvalidWebAddressException : Exception { }
 }

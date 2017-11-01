@@ -19,7 +19,7 @@ namespace WebTextCounter.Service
 
         private List<TextData> _GetTextDataFromWebResult(string webData)
         {
-            //remove anything that's not a word
+            //remove anything that's not alpha
             var reg = new Regex(@"[^\w]");
             return webData.Split(new char[] { '\r', '\n', ' ' }, StringSplitOptions.RemoveEmptyEntries) // break it in parts
                           .Select(s => reg.Replace(s, string.Empty).Trim().ToLower()) // take only chars

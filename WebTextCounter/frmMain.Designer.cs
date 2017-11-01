@@ -43,9 +43,9 @@
             // 
             this.panel1.Controls.Add(this.grdTextCounter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 93);
+            this.panel1.Location = new System.Drawing.Point(0, 156);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(536, 392);
+            this.panel1.Size = new System.Drawing.Size(575, 329);
             this.panel1.TabIndex = 4;
             // 
             // grdTextCounter
@@ -66,7 +66,7 @@
             this.grdTextCounter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grdTextCounter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdTextCounter.ShowEditingIcon = false;
-            this.grdTextCounter.Size = new System.Drawing.Size(536, 392);
+            this.grdTextCounter.Size = new System.Drawing.Size(575, 329);
             this.grdTextCounter.TabIndex = 4;
             // 
             // panel2
@@ -78,7 +78,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(536, 87);
+            this.panel2.Size = new System.Drawing.Size(575, 136);
             this.panel2.TabIndex = 5;
             // 
             // label1
@@ -102,9 +102,9 @@
             // 
             this.btnFetch.Location = new System.Drawing.Point(448, 39);
             this.btnFetch.Name = "btnFetch";
-            this.btnFetch.Size = new System.Drawing.Size(75, 20);
+            this.btnFetch.Size = new System.Drawing.Size(93, 20);
             this.btnFetch.TabIndex = 3;
-            this.btnFetch.Text = "Fetch";
+            this.btnFetch.Text = "Fetch from web";
             this.btnFetch.UseVisualStyleBackColor = true;
             this.btnFetch.Click += new System.EventHandler(this.btnFetch_Click);
             // 
@@ -114,7 +114,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(536, 485);
+            this.ClientSize = new System.Drawing.Size(575, 485);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

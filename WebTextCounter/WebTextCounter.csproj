@@ -45,9 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\InvalidWebAddressException.cs" />
     <Compile Include="Common\TextData.cs" />
-    <Compile Include="Common\UnableToConnectWebAddressException.cs" />
+    <Compile Include="Common\WebTextCounterExceptions.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

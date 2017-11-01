@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WebTextCounter.Service;
 using WebTextCounter.Common;
+using WebTextCounter.Service;
+
 
 namespace WebTextCounterTest
 {
@@ -27,9 +28,7 @@ namespace WebTextCounterTest
             var loyalAddress = @"http://www.loyalbooks.com/download/text/Railway-Children-by-E-Nesbit.txt";
             var webCounter = new WebTextCounterService();
             var result = webCounter.GetData(loyalAddress);
-            Assert.IsNotNull(result);
-            Assert.IsTrue(result.Count > 0);
+            Assert.IsNotNull(result);            
         }
-
     }
 }
