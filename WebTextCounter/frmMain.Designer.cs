@@ -43,9 +43,9 @@
             // 
             this.panel1.Controls.Add(this.grdTextCounter);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 85);
+            this.panel1.Location = new System.Drawing.Point(0, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(536, 400);
+            this.panel1.Size = new System.Drawing.Size(536, 392);
             this.panel1.TabIndex = 4;
             // 
             // grdTextCounter
@@ -66,7 +66,7 @@
             this.grdTextCounter.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.grdTextCounter.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdTextCounter.ShowEditingIcon = false;
-            this.grdTextCounter.Size = new System.Drawing.Size(536, 400);
+            this.grdTextCounter.Size = new System.Drawing.Size(536, 392);
             this.grdTextCounter.TabIndex = 4;
             // 
             // panel2
@@ -78,7 +78,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(536, 79);
+            this.panel2.Size = new System.Drawing.Size(536, 87);
             this.panel2.TabIndex = 5;
             // 
             // label1

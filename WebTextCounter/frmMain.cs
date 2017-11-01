@@ -20,9 +20,10 @@ namespace TextCounter
 
         private void btnFetch_Click(object sender, EventArgs e)
         {
-            var textCounter = new WebTextCounterService(edtWebAddress.Text);
-            var data = textCounter.GetData();
-            grdTextCounter.DataSource = data;
+            var textCounter = new WebTextCounterService();
+            var webTask = textCounter.GetData(edtWebAddress.Text);
+            
+            grdTextCounter.DataSource = webTask;
         }
     }
 }
