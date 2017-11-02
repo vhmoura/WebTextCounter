@@ -12,9 +12,19 @@ namespace TextCounterService
 {
     public class TextCounter
     {
-        public List<TextDataDto> GetData(string address)
+        public List<TextDataDto> CountWordsFromWeb(string address)
         {
-            return _GetTextDataFromWebResult(Web.GetWebData(address));
+            return _GetTextDataFromWebResult(Web.GetString(address));
+        }
+
+        public List<TextDataDto> CountWordsFromString(string text)
+        {
+            return _GetTextDataFromWebResult(Text.GetString(text));
+        }
+
+        public List<TextDataDto> CountWordsFromFile(string fileName)
+        {
+            return _GetTextDataFromWebResult(FileHelper.GetString(fileName));
         }
 
         private List<TextDataDto> _GetTextDataFromWebResult(string webData)

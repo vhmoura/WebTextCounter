@@ -9,24 +9,32 @@ namespace TextCounterService.Helpers
 {
     public static class Web
     {
-        public static string GetWebData(string address)
+        public static string GetString(string address)
         {
             if (string.IsNullOrWhiteSpace(address))
                 throw new InvalidWebAddressException();
 
-            try
+            string result = string.Empty;
+            using (var client = new WebClient())
             {
-                using (var client = new WebClient())
-                using (var stream = client.OpenRead(address))
-                using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                try
                 {
-                    return textReader.ReadToEnd();
+                    using (var stream = client.OpenRead(address))
+                    using (var textReader = new StreamReader(stream, Encoding.UTF8, true))
+                    {
+                        result = textReader.ReadToEnd();
+                    }
+                }
+                catch
+                {
+                    throw new UnableToConnectWebAddressException();
                 }
             }
-            catch
-            {
-                throw new UnableToConnectWebAddressException();
-            }
+
+            if (string.IsNullOrEmpty(result))
+                throw new EmptyStringException();
+
+            return result;
         }
     }
 }
