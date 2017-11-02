@@ -7,9 +7,9 @@ using TextCounterService.Common;
 
 namespace TextCounterService.Helpers
 {
-    public static class Web
+    public class Web: ITextCounter
     {
-        public static string GetString(string address)
+        public string GetString(string address)
         {
             if (string.IsNullOrWhiteSpace(address))
                 throw new InvalidWebAddressException();

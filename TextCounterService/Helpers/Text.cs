@@ -5,9 +5,9 @@ using TextCounterService.Common;
 
 namespace TextCounterService.Helpers
 {
-    public static class Text
+    public class Text: ITextCounter
     {
-        public static string GetString(string text)
+        public string GetString(string text)
         {
             if (string.IsNullOrWhiteSpace(text))
                 throw new EmptyStringException();

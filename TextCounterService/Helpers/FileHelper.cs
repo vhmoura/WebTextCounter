@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using System.Text;
 using TextCounterService.Common;
+using System.IO;
 
 namespace TextCounterService.Helpers
 {
-    public static class FileHelper
+    public class FileHelper: ITextCounter
     {
-        public static string GetString(string fileName)
+        public string GetString(string fileName)
         {
-            if (!System.IO.File.Exists(fileName))
+            if (!File.Exists(fileName))
                 throw new InvalidFileException();
 
-            var text = System.IO.File.ReadAllText(fileName);
+            var text = File.ReadAllText(fileName);
 
             if (string.IsNullOrEmpty(text))
                 throw new EmptyStringException();
