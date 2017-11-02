@@ -5,7 +5,7 @@ using TextCounterService.Common;
 namespace WebTextCounterTest
 {
     [TestClass]
-    public class WebTextCounterTest
+    public class TextCounterTests
     {
         [TestMethod, ExpectedException(typeof(InvalidWebAddressException))]                
         public void IsEmptyWebAddressValid()

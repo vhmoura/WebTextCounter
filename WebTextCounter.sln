@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebTextCounterTest", "WebTextCounterTest\WebTextCounterTest.csproj", "{38E6D7FA-BFCD-4EEE-8343-5BFAA84D706A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCounterTests", "WebTextCounterTest\TextCounterTests.csproj", "{38E6D7FA-BFCD-4EEE-8343-5BFAA84D706A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextCounterService", "TextCounterService\TextCounterService.csproj", "{586BA36A-76D2-40F0-8838-758B67B5980D}"
 EndProject
